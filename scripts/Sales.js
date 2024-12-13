@@ -1,10 +1,11 @@
 export const Sales = async () => {
-    const sales = await fetch("http://localhost:8088/orders").then(res => res.json())
+    const response = await fetch("http://localhost:8088/orders")
+    const sales = await response.json()
+    console.log(sales)
+    // let salesDivs = sales.map()
 
-    let salesDivs = sales.map()
+    // salesDivs = salesDivs.join("")
 
-    salesDivs = salesDivs.join("")
-
-    return salesDivs
+    // return salesDivs
 }
 
