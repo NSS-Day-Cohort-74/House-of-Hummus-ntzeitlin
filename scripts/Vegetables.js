@@ -12,10 +12,12 @@ export const Veggies = async () => {
     const vegetables = await response.json()
 
     const vegArray = vegetables.map((veg) => {
-        return `<div>
-        <input type="radio" name="vegetableoption" value="${veg.id}"/> ${veg.type}
-        </div>
-        `
+        if (veg.id !== 0) {
+            return `<div>
+            <input type="radio" name="vegetableoption" value="${veg.id}"/> ${veg.type}
+            </div>
+            `
+        }
     })
 
     let vegHTML = vegArray.join("")

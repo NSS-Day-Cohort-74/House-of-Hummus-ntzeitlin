@@ -13,10 +13,12 @@ export const Sides = async () => {
     const sides = await response.json()
 
     const sidesArray = sides.map((side) => {
-        return `<div>
-        <input type="radio" name="sideoption" value="${side.id}"/> ${side.title}
-        </div>
-        `
+        if (side.id !== 0) {
+            return `<div>
+            <input type="radio" name="sideoption" value="${side.id}"/> ${side.title}
+            </div>
+            `
+        }
     })
 
     let sidesHTML = sidesArray.join("")

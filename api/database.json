@@ -1,6 +1,11 @@
 {
   "entrees": [
     {
+      "name": "",
+      "price": 0,
+      "id": 0
+    },
+    {
       "name": "Hummus and Hot Sauce",
       "price": 6,
       "id": 1
@@ -53,6 +58,11 @@
   ],
   "vegetables": [
     {
+      "id": 0,
+      "type": "",
+      "price": 0
+    },
+    {
       "id": 1,
       "type": "Okra",
       "price": 2.65
@@ -100,6 +110,11 @@
   ],
   "sides": [
     {
+      "id": 0,
+      "title": "",
+      "price": 0
+    },
+    {
       "id": 1,
       "title": "Chicken Fried Steak Poppers",
       "price": 5.45
@@ -130,5 +145,42 @@
       "price": 5.2
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "id": 1,
+      "entreeId": 1,
+      "sideId": 3,
+      "vegetableId": 2
+    },
+    {
+      "id": 2,
+      "entreeId": 0,
+      "sideId": 0,
+      "vegetableId": 0
+    },
+    {
+      "id": 3,
+      "entreeId": 0,
+      "sideId": 0,
+      "vegetableId": 0
+    },
+    {
+      "id": 4,
+      "entreeId": 7,
+      "sideId": 0,
+      "vegetableId": 0
+    },
+    {
+      "id": 5,
+      "entreeId": 3,
+      "sideId": 3,
+      "vegetableId": 5
+    },
+    {
+      "id": 6,
+      "entreeId": 10,
+      "sideId": 4,
+      "vegetableId": 9
+    }
+  ]
 }

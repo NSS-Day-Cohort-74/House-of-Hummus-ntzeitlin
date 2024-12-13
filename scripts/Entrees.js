@@ -15,10 +15,12 @@ export const generateEntreeHTML = async () => {
     const entrees = await response.json()
 
     const entreesArray = entrees.map((entree) => {
-        return `<div>
-        <input type="radio" name="entreeoption" value="${entree.id}"/> ${entree.name}
-        </div>
-        `
+        if (entree.id !== 0) {
+            return `<div>
+            <input type="radio" name="entreeoption" value="${entree.id}"/> ${entree.name}
+            </div>
+            `
+        }
     })
 
     let entreesHTML = entreesArray.join("")
