@@ -1,5 +1,12 @@
 // change handler
 
+const handleEntreeChange = (changeEvent) => {
+    if (changeEvent.target.name === "entreeoption") {
+        const entreeChoice = changeEvent.target.value
+        console.log(parseInt(entreeChoice))
+    }
+}
+
 // component function
 export const generateEntreeHTML = async () => {
     const response = await fetch("http://localhost:8088/entrees")
@@ -13,6 +20,8 @@ export const generateEntreeHTML = async () => {
     })
 
     let entreesHTML = entreesArray.join("")
+
+    document.addEventListener("change", handleEntreeChange)
 
     return entreesHTML
 }

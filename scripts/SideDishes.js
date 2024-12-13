@@ -1,3 +1,11 @@
+const handleSideChange = (changeEvent) => {
+    if (changeEvent.target.name === "sideoption") {
+        const sideChoice = changeEvent.target.value
+        console.log(parseInt(sideChoice))
+    }
+}
+
+
 export const Sides = async () => {
     const response = await fetch("http://localhost:8088/sides")
     const sides = await response.json()
@@ -10,6 +18,8 @@ export const Sides = async () => {
     })
 
     let sidesHTML = sidesArray.join("")
+
+    document.addEventListener("change", handleSideChange)
 
     return sidesHTML
 }
