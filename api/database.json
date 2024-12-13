@@ -181,6 +181,30 @@
       "entreeId": 10,
       "sideId": 4,
       "vegetableId": 9
+    },
+    {
+      "id": 7,
+      "entreeId": 1,
+      "sideId": 6,
+      "vegetableId": 1
+    },
+    {
+      "id": 8,
+      "entreeId": 2,
+      "sideId": 3,
+      "vegetableId": 1
+    },
+    {
+      "id": 9,
+      "entreeId": 2,
+      "sideId": 3,
+      "vegetableId": 1
+    },
+    {
+      "id": 10,
+      "entreeId": 10,
+      "sideId": 4,
+      "vegetableId": 9
     }
   ]
 }
