@@ -1,9 +1,11 @@
 // change handler
 
+import { setEntreeChoice } from "./TransientState.js"
+
 const handleEntreeChange = (changeEvent) => {
     if (changeEvent.target.name === "entreeoption") {
         const entreeChoice = changeEvent.target.value
-        console.log(parseInt(entreeChoice))
+        setEntreeChoice(parseInt(entreeChoice))
     }
 }
 

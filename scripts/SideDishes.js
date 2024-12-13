@@ -1,7 +1,9 @@
+import { setSideChoice } from "./TransientState.js"
+
 const handleSideChange = (changeEvent) => {
     if (changeEvent.target.name === "sideoption") {
         const sideChoice = changeEvent.target.value
-        console.log(parseInt(sideChoice))
+        setSideChoice(parseInt(sideChoice))
     }
 }
 

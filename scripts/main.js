@@ -47,7 +47,7 @@ const renderAllHTML = async () => {
             </article>
         </section>
     
-        <article>
+        <article id="button">
             ${orderButtonHTML}
         </article>
         
@@ -61,7 +61,10 @@ const renderAllHTML = async () => {
 }
 
 // event listener to rerender
-
+document.addEventListener("orderPlaced", event => {
+    console.log("state changed")
+    renderAllHTML()
+})
 // initial render
 renderAllHTML()
 

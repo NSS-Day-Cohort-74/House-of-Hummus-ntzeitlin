@@ -1,7 +1,9 @@
+import { setVegChoice } from "./TransientState.js"
+
 const handleVegChange = (changeEvent) => {
     if (changeEvent.target.name === "vegetableoption") {
         const vegChoice = changeEvent.target.value
-        console.log(parseInt(vegChoice))
+        setVegChoice(parseInt(vegChoice))
     }
 }
 
