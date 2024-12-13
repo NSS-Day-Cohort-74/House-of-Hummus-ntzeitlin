@@ -51,6 +51,45 @@ sequenceDiagram
     participant API
 ```
 
+```mermaid
+sequenceDiagram
+    participant Main
+    participant FoodTruck
+    participantgroup component option modules
+    
+    
+
+participant component option modules
+
+participant generateButton
+
+    participant TransientState
+
+
+participant API
+
+
+Main->FoodTruck:Generate full HTML
+    FoodTruck->>component option modules: Generate radio options
+component option modules->API:what options do I need?\n
+component option modules<-API:these options
+    component option modules-->>FoodTruck: Here are some radio buttons
+
+component option modules->TransientState:gimme ways to change you
+component option modules<-TransientState:here ways to change me
+FoodTruck->generateButton:gimme button\n
+generateButton->TransientState:lemme purchase and submit permanent change\n
+generateButton<-TransientState:ok
+FoodTruck<-generateButton:here button
+Main<<--FoodTruck:Here is that HTMl
+    TransientState->>API: Save this dinner order
+    API-->>TransientState: Order saved
+
+Main<-TransientState:LISTEN TO ME CHANGE\n
+note left of Main:ok, you change, I change
+
+```
+
 ## Vocabulary and Understanding
 
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
