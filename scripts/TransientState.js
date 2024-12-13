@@ -48,6 +48,7 @@ export const placeOrder = async () => {
         body: JSON.stringify(transientState)
     }
     const response = await fetch("http://localhost:8088/purchases", postOptions)
+
     resetTransientState()
 
     const customEvent = new CustomEvent("orderPlaced")
