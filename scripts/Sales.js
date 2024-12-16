@@ -1,11 +1,13 @@
 export const Sales = async () => {
-    const response = await fetch("http://localhost:8088/purchases")
+    const response = await fetch("http://localhost:8088/purchases?_expand=entree&_expand=side&_expand=vegetable")
     const sales = await response.json()
-    console.log(sales)
-    // let salesDivs = sales.map()
 
-    // salesDivs = salesDivs.join("")
+    const salesArray = sales.map((sale) => {
+        const orderTotal = sale.entree.price + sale.vegetable.price + sale.side.price
+        return `<div>Receipt #${sale.id} = $${orderTotal.toFixed(2)}</div> `
+    })
 
-    // return salesDivs
+    let salesHTML = salesArray.join("")
+    return salesHTML
 }
 
