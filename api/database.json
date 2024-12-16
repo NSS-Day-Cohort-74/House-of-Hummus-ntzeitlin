@@ -145,12 +145,5 @@
       "price": 5.2
     }
   ],
-  "purchases": [
-    {
-      "id": 1,
-      "entreeId": 0,
-      "sideId": 0,
-      "vegetableId": 0
-    }
-  ]
+  "purchases": []
 }

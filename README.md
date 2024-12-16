@@ -51,7 +51,7 @@ sequenceDiagram
     participant API
 ```
 
-```mermaid
+```
 sequenceDiagram
     participant Main
     participant FoodTruck
@@ -75,7 +75,7 @@ sequenceDiagram
     TransientState->>API: Save this dinner order
     API-->>TransientState: Order saved
     Main<-TransientState:LISTEN TO ME CHANGE\n
-    note left of Main:ok, you change, I change   
+   note left of Main:ok, you change, I change   
 ```
 
 ## Vocabulary and Understanding

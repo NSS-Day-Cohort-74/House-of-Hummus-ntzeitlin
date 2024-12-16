@@ -14,21 +14,15 @@ const resetTransientState = () => {
 
 // state setter functions
 export const setEntreeChoice = (entreeChoice) => {
-    if (entreeChoice !== 0) {
-        transientState.entreeId = entreeChoice
-    }
+    transientState.entreeId = entreeChoice
 }
 
 export const setSideChoice = (sideChoice) => {
-    if (sideChoice !== 0) {
-        transientState.sideId = sideChoice
-    }
+    transientState.sideId = sideChoice
 }
 
 export const setVegChoice = (vegChoice) => {
-    if (vegChoice !== 0) {
-        transientState.vegetableId = vegChoice
-    }
+    transientState.vegetableId = vegChoice
 }
 
 // send to permanent state
